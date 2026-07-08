@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Potnuru Divakar Rao - Graphic Designer Resume</title>
     <style>
-        /* Ultra-compressed styles to guarantee zero vertical scrolling on standard screens */
+        /* Maximum optimization to fit the entire screen layout in one micro view pane without scroll overflow */
         :root {
             --bg-color: #f2ebf0;
             --window-border: #805466;
@@ -26,9 +26,9 @@
         body {
             background-color: var(--bg-color);
             background-image: radial-gradient(var(--accent-pink) 1px, transparent 0);
-            background-size: 10px 10px;
+            background-size: 8px 8px;
             color: var(--text-dark);
-            padding: 5px;
+            padding: 4px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -36,10 +36,10 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
         }
 
-        /* Scaled down width and extreme padding reductions to fit everything comfortably */
+        /* Scaled extreme-compact core shell */
         .resume-container {
             width: 100%;
-            max-width: 680px;
+            max-width: 630px;
             background: #ffffff;
             border: 2px solid var(--window-border);
             box-shadow: var(--shadow);
@@ -47,56 +47,56 @@
             overflow: hidden;
         }
 
-        /* Micro top title bar */
+        /* Micro systems title bar line header style configuration */
         .window-header {
             background-color: var(--window-header);
-            padding: 2px 8px;
+            padding: 2px 6px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 2px solid var(--window-border);
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
         }
 
         .window-controls {
             display: flex;
-            gap: 4px;
+            gap: 3px;
         }
 
         .control-btn {
-            width: 9px;
-            height: 9px;
+            width: 8px;
+            height: 8px;
             border: 1px solid var(--window-border);
             background-color: #ffffff;
         }
 
-        /* Two-column structural grid fixed */
+        /* Flat desktop layout grid */
         .resume-content {
             display: grid;
-            grid-template-columns: 175px 1fr;
+            grid-template-columns: 160px 1fr;
         }
 
-        /* Tiny Sidebar Column */
+        /* Left side navigation column pane data fields optimization zone */
         .sidebar {
             background-color: var(--sidebar-bg);
             border-right: 2px solid var(--window-border);
-            padding: 6px;
+            padding: 4px;
         }
 
-        /* Tiny profile photo player combo box */
+        /* Photo media UI box wrapper */
         .profile-box {
-            border: 2px solid var(--window-border);
+            border: 1.5px solid var(--window-border);
             border-radius: 2px;
             background: #ffffff;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             overflow: hidden;
         }
 
         .profile-img-frame {
             width: 100%;
-            height: 90px;
+            height: 75px;
             background-color: var(--accent-pink);
             overflow: hidden;
             display: flex;
@@ -117,21 +117,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 6px;
-            font-size: 0.55rem;
+            gap: 4px;
+            font-size: 0.5rem;
         }
 
-        /* Compact Title Badges */
+        /* Minimal high precision design title label chips */
         .section-label {
             background-color: var(--window-border);
             color: #ffffff;
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
-            font-size: 0.6rem;
-            letter-spacing: 0.3px;
+            font-size: 0.55rem;
+            letter-spacing: 0.2px;
             text-transform: uppercase;
-            padding: 1px 4px;
-            margin: 6px 0 3px 0;
+            padding: 1px 3px;
+            margin: 4px 0 2px 0;
             display: inline-block;
         }
 
@@ -139,16 +139,16 @@
             margin-top: 0;
         }
 
-        /* Compact sidebar text entries */
+        /* Pure structural padding blocks */
         .contact-group {
             margin-bottom: 2px;
-            font-size: 0.68rem;
-            line-height: 1.1;
+            font-size: 0.62rem;
+            line-height: 1;
         }
 
-        .contact-group span {
+        .contact-group-title {
             display: block;
-            font-size: 0.52rem;
+            font-size: 0.48rem;
             text-transform: uppercase;
             color: var(--text-muted);
             font-weight: bold;
@@ -160,11 +160,11 @@
 
         .custom-list li {
             position: relative;
-            padding-left: 8px;
-            margin-bottom: 1px;
-            font-size: 0.68rem;
+            padding-left: 6px;
+            margin-bottom: 0px;
+            font-size: 0.62rem;
             font-weight: 500;
-            line-height: 1.1;
+            line-height: 1.05;
         }
 
         .custom-list li::before {
@@ -174,9 +174,9 @@
             color: var(--window-border);
         }
 
-        /* Compact Main Content Body Canvas */
+        /* Compact right section details panel layout zone context elements styling */
         .main-section {
-            padding: 8px 12px;
+            padding: 6px 10px;
             background-color: #ffffff;
             display: flex;
             flex-direction: column;
@@ -184,14 +184,14 @@
         }
 
         .header-title {
-            margin-bottom: 6px;
-            padding-bottom: 2px;
+            margin-bottom: 4px;
+            padding-bottom: 1px;
             border-bottom: 1px dashed var(--accent-pink);
         }
 
         .header-title h1 {
             font-family: 'Courier New', Courier, monospace;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             text-transform: uppercase;
             color: var(--text-dark);
@@ -199,17 +199,17 @@
         }
 
         .header-title h2 {
-            font-size: 0.72rem;
+            font-size: 0.65rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.2px;
             color: var(--window-border);
             margin-top: 1px;
         }
 
-        /* Compact Timeline Components */
+        /* Condensed timelines structural configurations */
         .timeline-item {
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .timeline-header {
@@ -220,7 +220,7 @@
         }
 
         .timeline-role {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: bold;
             color: var(--text-dark);
             text-transform: uppercase;
@@ -228,7 +228,7 @@
 
         .timeline-meta {
             font-family: 'Courier New', Courier, monospace;
-            font-size: 0.62rem;
+            font-size: 0.58rem;
             font-weight: bold;
             color: var(--window-border);
             text-align: right;
@@ -242,10 +242,10 @@
 
         .timeline-desc li {
             position: relative;
-            padding-left: 8px;
+            padding-left: 6px;
             margin-bottom: 1px;
-            font-size: 0.7rem;
-            line-height: 1.2;
+            font-size: 0.65rem;
+            line-height: 1.15;
             color: var(--text-dark);
         }
 
@@ -254,30 +254,30 @@
             position: absolute;
             left: 0;
             color: var(--window-header);
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             top: -1px;
         }
 
-        /* Micro size Education components */
+        /* Condensed micro data list setups for institutions info tracking block */
         .edu-item h4 {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: bold;
             text-transform: uppercase;
             color: var(--text-dark);
-            margin-bottom: 1px;
+            margin-bottom: 0px;
         }
 
         .edu-item p {
-            font-size: 0.68rem;
+            font-size: 0.62rem;
             color: var(--text-muted);
-            line-height: 1.1;
+            line-height: 1;
         }
     </style>
 </head>
 <body>
 
     <div class="resume-container">
-        <!-- Compact Control Banner -->
+        <!-- Compact Control Banner Header UI Strip -->
         <div class="window-header">
             <span>DIVAKAR_RESUME.SYS</span>
             <div class="window-controls">
@@ -287,11 +287,11 @@
         </div>
 
         <div class="resume-content">
-            <!-- Left Pane -->
+            <!-- Left Panel Workspace Configuration Side View Column Frame Layer Area -->
             <aside class="sidebar">
                 <div class="profile-box">
                     <div class="profile-img-frame">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Potnuru Divakar Rao Portrait Image">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Potnuru Divakar Rao Profile Snapshot">
                     </div>
                     <div class="media-bar">
                         <span>⏮</span>
@@ -303,15 +303,15 @@
                 <div class="section-label">Profile</div>
                 <div class="contact-info">
                     <div class="contact-group">
-                        <span>Phone</span>
+                        <span class="contact-group-title">Phone</span>
                         <p>+91 9030 10 23 10[span_0](start_span)[span_0](end_span)</p>
                     </div>
                     <div class="contact-group">
-                        <span>Email</span>
+                        <span class="contact-group-title">Email</span>
                         <p>divakar@gmx.us[span_1](start_span)[span_1](end_span)</p>
                     </div>
                     <div class="contact-group">
-                        <span>Location</span>
+                        <span class="contact-group-title">Location</span>
                         <p>Andhra Pradesh, IN[span_2](start_span)[span_2](end_span)</p>
                     </div>
                 </div>
@@ -335,7 +335,7 @@
                 </ul>
             </aside>
 
-            <!-- Right Pane -->
+            <!-- Right Panel Main Board Sheet Section Container Canvas Element Area Body Content Field -->
             <main class="main-section">
                 <div>
                     <div class="header-title">
@@ -343,7 +343,7 @@
                         <h2>Graphic Designer</h2>[span_11](start_span)[span_11](end_span)
                     </div>
 
-                    <div class="section-label" style="margin-top: 0; margin-bottom: 4px;">Experience</div>
+                    <div class="section-label" style="margin-top: 0; margin-bottom: 2px;">Experience</div>
 
                     <div class="timeline-item">
                         <div class="timeline-header">
@@ -371,7 +371,7 @@
                 </div>
 
                 <div>
-                    <div class="section-label" style="margin-top: 2px; margin-bottom: 3px;">Education</div>
+                    <div class="section-label" style="margin-top: 1px; margin-bottom: 2px;">Education</div>
                     <div class="edu-item">
                         <h4>Bachelor of Science in Computers</h4>[span_15](start_span)[span_15](end_span)
                         <p>A. V. N College — Andhra University (2005 - 2008)[span_16](start_span)[span_16](end_span)</p>
