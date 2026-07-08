@@ -5,295 +5,393 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Potnuru Divakar Rao - Graphic Designer Resume</title>
     <style>
+        /* Modernized Y2K / Synthwave Palette with premium spacing */
         :root {
-            --bg-color: #f5eff2;
-            --window-border: #9a6d80;
-            --window-header: #c59eb0;
-            --accent-pink: #e8b4c8;
-            --text-dark: #3a2d34;
-            --text-light: #ffffff;
-            --shadow: 4px 4px 0px #9a6d80;
+            --bg-color: #f7f2f5;
+            --window-border: #6d4457;
+            --window-header: #dbb3c5;
+            --accent-pink: #f2cbd9;
+            --text-dark: #2c1e25;
+            --text-muted: #6b5762;
+            --sidebar-bg: #fff5f9;
+            --shadow: 6px 6px 0px #6d4457;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Courier New', Courier, monospace, sans-serif;
         }
 
         body {
             background-color: var(--bg-color);
+            background-image: radial-gradient(var(--accent-pink) 1px, transparent 0);
+            background-size: 24px 24px;
             color: var(--text-dark);
-            padding: 40px 20px;
+            padding: 50px 20px;
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
+        /* Polished OS window wrapper */
         .resume-container {
             width: 100%;
-            max-width: 900px;
+            max-width: 950px;
             background: #ffffff;
-            border: 3px solid var(--window-border);
+            border: 4px solid var(--window-border);
             box-shadow: var(--shadow);
-            border-radius: 4px;
+            border-radius: 8px;
             overflow: hidden;
         }
 
-        /* Top Window Bar UI Style */
+        /* Retro OS Header Theme */
         .window-header {
             background-color: var(--window-header);
-            padding: 10px 15px;
+            padding: 12px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid var(--window-border);
-            font-weight: bold;
-            color: var(--text-dark);
+            border-bottom: 4px solid var(--window-border);
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 900;
+            letter-spacing: 1px;
         }
 
         .window-controls {
             display: flex;
-            gap: 10px;
-            font-size: 1.2rem;
-            cursor: default;
+            gap: 12px;
+            font-weight: bold;
         }
 
-        /* Strict Desktop-First Grid Layout (Locked for both desktop and mobile screens) */
+        .control-btn {
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--window-border);
+            background-color: #ffffff;
+            box-shadow: 1px 1px 0px var(--window-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        /* Desktop Layout Override */
         .resume-content {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 320px 1fr;
         }
 
-        /* Sidebar Styling */
+        /* Left Side Profile & Metrics Column */
         .sidebar {
-            background-color: #fff0f6;
-            border-right: 3px solid var(--window-border);
-            padding: 30px 20px;
+            background-color: var(--sidebar-bg);
+            border-right: 4px solid var(--window-border);
+            padding: 35px 25px;
         }
 
-        .profile-img-container {
+        /* Enhanced Player/Image Box UI */
+        .profile-box {
+            border: 4px solid var(--window-border);
+            border-radius: 4px;
+            background: #ffffff;
+            box-shadow: 3px 3px 0px var(--window-border);
+            margin-bottom: 35px;
+            overflow: hidden;
+        }
+
+        .profile-img-frame {
             width: 100%;
-            border: 3px solid var(--window-border);
-            margin-bottom: 25px;
-            position: relative;
-            background: var(--accent-pink);
+            height: 250px;
+            background-color: var(--accent-pink);
             overflow: hidden;
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        .profile-img-container img {
+        .profile-img-frame img {
             width: 100%;
-            height: auto;
-            display: block;
+            height: 100%;
+            object-fit: cover;
         }
 
-        /* Media Player Controls UI Sub-theme */
-        .player-controls {
+        .media-bar {
             background-color: var(--window-header);
-            border-top: 3px solid var(--window-border);
-            padding: 8px;
+            border-top: 4px solid var(--window-border);
+            padding: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px;
-            font-size: 1rem;
+            gap: 20px;
         }
 
-        .section-title {
-            background-color: var(--window-header);
-            color: var(--text-dark);
-            padding: 5px 10px;
-            margin: 25px 0 15px 0;
+        .media-btn {
             font-size: 1.1rem;
-            text-transform: uppercase;
-            border: 2px solid var(--window-border);
-            display: inline-block;
-            font-weight: bold;
-            box-shadow: 2px 2px 0px var(--window-border);
+            cursor: pointer;
+            transition: transform 0.1s ease;
         }
 
-        .sidebar .section-title:first-of-type {
+        .media-btn:hover {
+            transform: scale(1.15);
+        }
+
+        /* Beautiful UI Styled Labels */
+        .section-label {
+            background-color: var(--window-border);
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 0.95rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            margin: 30px 0 15px 0;
+            display: inline-block;
+            border-radius: 2px;
+        }
+
+        .sidebar .section-label:first-of-type {
             margin-top: 0;
         }
 
-        .contact-info p, .skills-list li, .lang-list li {
-            margin-bottom: 10px;
-            font-size: 0.9rem;
+        /* Content List Typography */
+        .contact-group {
+            margin-bottom: 12px;
+        }
+
+        .contact-group span {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .contact-group p {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .custom-list {
             list-style: none;
-            line-height: 1.4;
         }
 
-        .skills-list, .lang-list {
-            padding-left: 0;
+        .custom-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
         }
 
-        .skills-list li::before, .lang-list li::before {
-            content: "☑ ";
+        .custom-list li::before {
+            content: "➔";
+            position: absolute;
+            left: 0;
             color: var(--window-border);
             font-weight: bold;
         }
 
-        /* Main Section Styling */
+        /* Right Side Details Column */
         .main-section {
-            padding: 30px;
+            padding: 40px;
             background-color: #ffffff;
         }
 
         .header-title {
-            margin-bottom: 30px;
-            border-bottom: 3px dashed var(--window-border);
-            padding-bottom: 15px;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 4px dashed var(--accent-pink);
         }
 
         .header-title h1 {
-            font-size: 2.2rem;
-            color: var(--text-dark);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2.5rem;
+            font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 5px;
-            line-height: 1.2;
+            color: var(--text-dark);
+            line-height: 1.1;
+            margin-bottom: 8px;
         }
 
         .header-title h2 {
-            font-size: 1.3rem;
-            color: var(--window-border);
+            font-size: 1.25rem;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            color: var(--window-border);
         }
 
-        .job-block {
-            margin-bottom: 25px;
+        /* Experience Elements Layout */
+        .timeline-item {
+            margin-bottom: 35px;
+            position: relative;
         }
 
-        .job-header {
+        .timeline-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 10px;
+            align-items: baseline;
+            margin-bottom: 12px;
+        }
+
+        .timeline-role {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-transform: uppercase;
+        }
+
+        .timeline-meta {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
             font-weight: bold;
-        }
-
-        .job-title {
-            color: var(--text-dark);
-            font-size: 1.1rem;
-        }
-
-        .job-company-date {
             color: var(--window-border);
-            font-size: 0.9rem;
             text-align: right;
-            white-space: nowrap;
         }
 
-        .job-details {
+        .timeline-desc {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .timeline-desc li {
+            position: relative;
             padding-left: 20px;
-        }
-
-        .job-details li {
             margin-bottom: 8px;
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             line-height: 1.5;
-        }
-
-        .edu-block h4 {
-            font-size: 1rem;
             color: var(--text-dark);
-            margin-bottom: 4px;
         }
 
-        .edu-block p {
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.4;
+        .timeline-desc li::before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: var(--window-header);
+            font-size: 1.2rem;
+            top: -2px;
+        }
+
+        /* Education Layout Block */
+        .edu-item h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .edu-item p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
     <div class="resume-container">
+        <!-- Top Title Bar Design element -->
         <div class="window-header">
-            <span>RESUME_LAYOUT.EXE</span>
+            <span>PORTFOLIO_OS // DIVAKAR_RESUME.EXE</span>
             <div class="window-controls">
-                <span>_</span>
-                <span>X</span>
+                <div class="control-btn">-</div>
+                <div class="control-btn">X</div>
             </div>
         </div>
 
         <div class="resume-content">
+            <!-- Sidebar Layout Area -->
             <aside class="sidebar">
-                <div class="profile-img-container">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Potnuru Divakar Rao Photo">
-                    <div class="player-controls">
-                        <span>⏮</span>
-                        <span>▶</span>
-                        <span>⏭</span>
+                <div class="profile-box">
+                    <div class="profile-img-frame">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Potnuru Divakar Rao Graphic Design Headshot">
+                    </div>
+                    <div class="media-bar">
+                        <span class="media-btn">⏮</span>
+                        <span class="media-btn" style="font-size: 1.3rem;">▶</span>
+                        <span class="media-btn">⏭</span>
                     </div>
                 </div>
 
-                <div class="section-title">Profile</div>
+                <div class="section-label">Profile</div>
                 <div class="contact-info">
-                    [span_0](start_span)<p><strong>Phone:</strong><br>+91 9030 10 23 10[span_0](end_span)</p>
-                    [span_1](start_span)<p><strong>Email:</strong><br>divakar@gmx.us[span_1](end_span)</p>
-                    [span_2](start_span)<p><strong>Location:</strong><br>Srikakulam, Andhra Pradesh, IN 532401[span_2](end_span)</p>
+                    <div class="contact-group">
+                        <span>Phone</span>
+                        <p>+91 9030 10 23 10[span_0](start_span)[span_0](end_span)</p>
+                    </div>
+                    <div class="contact-group">
+                        <span>Email</span>
+                        <p>divakar@gmx.us[span_1](start_span)[span_1](end_span)</p>
+                    </div>
+                    <div class="contact-group">
+                        <span>Location</span>
+                        <p>Srikakulam, AP, IN 532401[span_2](start_span)[span_2](end_span)</p>
+                    </div>
                 </div>
 
-                <div class="section-title">Skills</div>
-                <ul class="skills-list">
-                    [span_3](start_span)<li>Capturing Things[span_3](end_span)</li>
-                    [span_4](start_span)<li>Digital drawing[span_4](end_span)</li>
-                    [span_5](start_span)<li>Photo editing[span_5](end_span)</li>
-                    [span_6](start_span)<li>Photography[span_6](end_span)</li>
-                    [span_7](start_span)<li>Web programming[span_7](end_span)</li>
-                    [span_8](start_span)<li>Web layout design[span_8](end_span)</li>
-                    [span_9](start_span)<li>Market research[span_9](end_span)</li>
+                <div class="section-label">Expertise</div>
+                <ul class="custom-list">
+                    <li>Capturing Things[span_3](start_span)[span_3](end_span)</li>
+                    <li>Digital drawing[span_4](start_span)[span_4](end_span)</li>
+                    <li>Photo editing[span_5](start_span)[span_5](end_span)</li>
+                    <li>Photography[span_6](start_span)[span_6](end_span)</li>
+                    <li>Web programming[span_7](start_span)[span_7](end_span)</li>
+                    <li>Web layout design[span_8](start_span)[span_8](end_span)</li>
+                    <li>Market research[span_9](start_span)[span_9](end_span)</li>
                 </ul>
 
-                <div class="section-title">Language</div>
-                <ul class="lang-list">
-                    [span_10](start_span)<li>English[span_10](end_span)</li>
-                    [span_11](start_span)<li>Hindi[span_11](end_span)</li>
-                    [span_12](start_span)<li>Telugu[span_12](end_span)</li>
+                <div class="section-label">Languages</div>
+                <ul class="custom-list">
+                    <li>English</li>
+                    <li>Hindi</li>
+                    <li>Telugu</li>
                 </ul>
             </aside>
 
+            <!-- Main Panel Details Area -->
             <main class="main-section">
                 <div class="header-title">
-                    [span_13](start_span)<h1>Potnuru Divakar Rao</h1>[span_13](end_span)
-                    [span_14](start_span)<h2>Graphic Designer</h2>[span_14](end_span)
+                    <h1>Potnuru Divakar Rao</h1>[span_10](start_span)[span_10](end_span)
+                    <h2>Graphic Designer</h2>[span_11](start_span)[span_11](end_span)
                 </div>
 
-                <div class="section-title" style="margin-top: 0;">Experience</div>
+                <div class="section-label" style="margin-top: 0; margin-bottom: 25px;">Professional Experience</div>
 
-                <div class="job-block">
-                    <div class="job-header">
-                        [span_15](start_span)<div class="job-title">FREELANCE WEB DEVELOPER</div>[span_15](end_span)
-                        [span_16](start_span)<div class="job-company-date">Paucek and Lage<br>(2015 - Present)</div>[span_16](end_span)
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-role">Freelance Web Developer</div>[span_12](start_span)[span_12](end_span)
+                        <div class="timeline-meta">Paucek and Lage<br>2015 - Till[span_13](start_span)[span_13](end_span)</div>
                     </div>
-                    <ul class="job-details">
-                        [span_17](start_span)<li>Created original graphic of the booth display for the Borcelle autumn fashion event.[span_17](end_span)</li>
-                        [span_18](start_span)<li>Collaborated with the sales team to create the sales content for the promotion campaign of the Ingoude Company's 10th Anniversary.[span_18](end_span)</li>
-                        [span_19](start_span)<li>Led the team of the graphic and website designer on the renewal of the website design of Giggling Platypus Co.[span_19](end_span)</li>
+                    <ul class="timeline-desc">
+                        <li>Created original graphic of the booth display for the Borcelle autumn fashion event.[span_14](start_span)[span_14](end_span)</li>
+                        <li>Collaborated with the sales team to create the sales content for the promotion campaign of the Ingoude Company's 10th Anniversary.</li>
+                        <li>Led the team of the graphic and website designer on the renewal of the website design of Giggling Platypus Co.</li>
                     </ul>
                 </div>
 
-                <div class="job-block">
-                    <div class="job-header">
-                        [span_20](start_span)<div class="job-title">FREELANCE WEB DESIGNER</div>[span_20](end_span)
-                        [span_21](start_span)<div class="job-company-date">Studio Shodwe<br>(2008 - 2013)</div>[span_21](end_span)
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-role">Freelance Web Designer</div>
+                        <div class="timeline-meta">Studio Shodwe<br>2008 - 2013</div>
                     </div>
-                    <ul class="job-details">
-                        [span_22](start_span)<li>Created a new in-store display for a local apparel store that increased sales by 20% after three months of the installation.[span_22](end_span)</li>
-                        [span_23](start_span)<li>Created the festival banner for the local food festival in June 2015, which has successfully attracted more than 2000 people from other cities.[span_23](end_span)</li>
-                        [span_24](start_span)<li>Designed the flier for the Christmas event of the local Church.[span_24](end_span)</li>
+                    <ul class="timeline-desc">
+                        <li>Created a new in-store display for a local apparel store that increased sales by 20% after three months of the installation.</li>
+                        <li>Created the festival banner for the local food festival in June 2015, which successfully attracted more than 2,000 people from other cities.</li>
+                        <li>Designed the flier for the Christmas event of the local Church.</li>
                     </ul>
                 </div>
 
-                <div class="section-title">Education</div>
-                <div class="edu-block">
-                    [span_25](start_span)<h4>BACHELOR OF SCIENCE IN COMPUTERS</h4>[span_25](end_span)
-                    <p>A. [span_26](start_span)V. N College<br>Andhra University<br>(2005 - 2008)</p>[span_26](end_span)
+                <div class="section-label" style="margin-bottom: 25px;">Education Background</div>
+                <div class="edu-item">
+                    <h4>Bachelor of Science in Computers</h4>[span_15](start_span)[span_15](end_span)
+                    <p>A. V. N College — Andhra University<br>Graduated: 2005 - 2008[span_16](start_span)[span_16](end_span)</p>
                 </div>
             </main>
         </div>
